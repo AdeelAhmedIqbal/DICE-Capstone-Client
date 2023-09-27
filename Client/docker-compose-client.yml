@@ -1,0 +1,17 @@
+version: '3'
+services:
+  client:
+    build:
+      context: ./
+      dockerfile: Dockerfile.Client
+    volumes:
+      - clientvol:/clientdata
+    networks:
+      - mynetwork
+volumes:
+  clientvol:
+
+networks:
+  mynetwork:
+    external:
+      name: mynetwork  # Use the same network defined in the server Compose file
