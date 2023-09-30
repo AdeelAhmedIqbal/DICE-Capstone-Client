@@ -24,7 +24,7 @@ jobs:
           context: ./Client
           file: ./Client/Dockerfile.Client
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/server-repo:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/client-repo:latest
       - name: Send Slack notification
         uses: rtCamp/action-slack-notify@v2
         env:
